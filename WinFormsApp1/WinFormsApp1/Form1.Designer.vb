@@ -38,6 +38,10 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Field5 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.FirstB = New System.Windows.Forms.Button()
+        Me.PrevB = New System.Windows.Forms.Button()
+        Me.NextB = New System.Windows.Forms.Button()
+        Me.LastB = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,13 +66,13 @@ Partial Class Form1
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(123, 26)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'NewToolStripMenuItem1
         '
         Me.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1"
-        Me.NewToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.NewToolStripMenuItem1.Size = New System.Drawing.Size(123, 26)
         Me.NewToolStripMenuItem1.Text = "New"
         '
         'Label1
@@ -148,9 +152,10 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(131, 31)
+        Me.PictureBox1.Location = New System.Drawing.Point(425, 75)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(105, 52)
+        Me.PictureBox1.Size = New System.Drawing.Size(235, 153)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
@@ -165,11 +170,51 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'FirstB
+        '
+        Me.FirstB.Location = New System.Drawing.Point(383, 409)
+        Me.FirstB.Name = "FirstB"
+        Me.FirstB.Size = New System.Drawing.Size(94, 29)
+        Me.FirstB.TabIndex = 12
+        Me.FirstB.Text = "First"
+        Me.FirstB.UseVisualStyleBackColor = True
+        '
+        'PrevB
+        '
+        Me.PrevB.Location = New System.Drawing.Point(483, 409)
+        Me.PrevB.Name = "PrevB"
+        Me.PrevB.Size = New System.Drawing.Size(94, 29)
+        Me.PrevB.TabIndex = 13
+        Me.PrevB.Text = "Previous"
+        Me.PrevB.UseVisualStyleBackColor = True
+        '
+        'NextB
+        '
+        Me.NextB.Location = New System.Drawing.Point(583, 409)
+        Me.NextB.Name = "NextB"
+        Me.NextB.Size = New System.Drawing.Size(94, 29)
+        Me.NextB.TabIndex = 14
+        Me.NextB.Text = "Next"
+        Me.NextB.UseVisualStyleBackColor = True
+        '
+        'LastB
+        '
+        Me.LastB.Location = New System.Drawing.Point(683, 409)
+        Me.LastB.Name = "LastB"
+        Me.LastB.Size = New System.Drawing.Size(94, 29)
+        Me.LastB.TabIndex = 15
+        Me.LastB.Text = "Last"
+        Me.LastB.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.LastB)
+        Me.Controls.Add(Me.NextB)
+        Me.Controls.Add(Me.PrevB)
+        Me.Controls.Add(Me.FirstB)
         Me.Controls.Add(Me.Field5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Field4)
@@ -209,4 +254,8 @@ Partial Class Form1
     Friend WithEvents Field5 As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents NewToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FirstB As Button
+    Friend WithEvents PrevB As Button
+    Friend WithEvents NextB As Button
+    Friend WithEvents LastB As Button
 End Class
